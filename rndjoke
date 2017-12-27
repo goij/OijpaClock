@@ -9,4 +9,4 @@ BADJOKE=`sed "${rnd}q;d" /home/goij/OijpaClock/badjokes.txt`
 echo "Joke #$rnd: $BADJOKE"
 
 echo $BADJOKE | sudo festival --tts
-echo $BADJOKE | sudo espeak >/dev/null 2>/dev/null
+echo $BADJOKE | sudo espeak -a 150 -p 65 >/dev/null 2>/dev/null
