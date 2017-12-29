@@ -1,12 +1,21 @@
 #!/bin/bash
 
-LINES=`wc -l /home/goij/OijpaClock/badjokes.txt | sed -e 's/ .*//'`
-
+# this shell script flashes a 3-led LED for a second
+#fl3-1&
+LINES=`wc -l /home/pi/OijpaClock/badjokes.txt | sed -e 's/ .*//'`
+#lasers1sec&
 rnd=`echo $((1 + RANDOM % $LINES))`
 
-BADJOKE=`sed "${rnd}q;d" /home/goij/OijpaClock/badjokes.txt`
+BADJOKE=`sed "${rnd}q;d" /home/pi/OijpaClock/badjokes.txt`
 
 echo "Joke #$rnd: $BADJOKE"
 
 echo $BADJOKE | sudo festival --tts
-echo $BADJOKE | sudo espeak -a 150 -p 65 >/dev/null 2>/dev/null
+
+#espeak:
+# -a amplitude; 0-200; default 100
+# -p pitch; 0-90; default is 50
+# -s speed; (words per minute); default is 160
+#echo $BADJOKE | sudo espeak -a 150 -p 65 -s 140 >/dev/null 2>/dev/null&
+
+#fl3-1&
