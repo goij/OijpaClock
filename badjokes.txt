@@ -72,7 +72,8 @@ Which knight at the round table allowed people to get through a gate?  Sir Pass.
 Which knight at the round table had the most wet hair?  Sir Fur.
 Which knight at the round table was the most truthful person?  Sir Real.
 Which knight at the round table swore the most?  Sir Cuss.
-Which knight at the round table had the smartest knife?  Sir Cut.
+Which knight at the round table had the electrical knife?  Sir Cut.
+Which electrical knight at the round table was the most expensive?  Sir Charge.
 What does a sub-atomic duck say?  Quirk.
 What was Betsy Ross' favorite sport?  Flag Football.
 What do you call a number that wanders?  Roman Numeral.
@@ -127,8 +128,7 @@ Why do Nor wee gin battle ships have barcodes on them?  They need to scan da nav
 Where do sled drivers keep all of their huskies?  In the mush room.
 So why did Waldo always wear striped shirts?  Because he didn't want to get spotted.
 What do you do with epilectic lettus?  Make a seizure salad.
-What do you call a country that pees inside? Your in nation.
-What do get when you cross a pirate with a self-learning program?  are tee fish all intelligence.
+What do get when you cross a fish with a self-learning program?  are tee fish all intelligence.
 What does a pirate say to his friend after he just turned 80?  Hi Matey.
 Why do most programmers do better in the morning?  They have Java.
 What do you call a man sits down and tries to teach topics that everybody knows?  Chair Man of the Board.
@@ -136,3 +136,6 @@ What did the necktie say to the hat?  You go on a head; I will hang around.
 What do you call a funny criminal with a cold named Ted?  Con Jest Ted.
 What do you call an average golfer who likes pizza?  Par Cheezy.
 What do you call it when you have to pee with a friend in the same country?  Urine nation is my nation.
+What did the under score say about tomorrow?  Tilda next day.
+A limbo player walks into a bar. He was disqualified. 
+What do you call a criminal feline in a country?  Concatenation.
