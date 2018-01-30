@@ -29,7 +29,7 @@ What do you call a cow who has lost a child?  Decaffeinated.
 What do you call a cow in tall grass?  Utterly tickled.
 What do you call a cow with no legs?  Ground beef.
 What do you call a cow with two legs?  Lean beef.
-What do you call a cow who gives no milk?  A milk dud. (Or an udder failure, of course).
+What do you call a cow who gives no milk?  A milk dud. (Or an udder failure).
 You hear about Bill the cannibal?  Relatively ordinary guy, had a house, a wife, ate children.
 Why do cannibals not eat clowns?  They taste funny.
 One atom bumps into another. The first one says, "You okay?"  The other answers, "No, I think I lost an electron."  The first asks, "Are you sure?"  "Yeah," the other replies. "I am positive!"
@@ -139,3 +139,4 @@ What do you call it when you have to pee with a friend in the same country?  Uri
 What did the under score say about tomorrow?  Tilda next day.
 A limbo player walks into a bar. He was disqualified. 
 What do you call a criminal feline in a country?  Concatenation.
+Why was the math professor such a good dancer?  She had algorithm.
