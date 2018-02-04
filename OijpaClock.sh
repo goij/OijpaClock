@@ -18,7 +18,7 @@ echo $HOUR
 
 cd /home/pi/OijpaClock
 
-sudo mpg123 Westminster.mp3 > /dev/null 2>/dev/null
+sudo omxplayer Westminster.mp3 > /dev/null 2>/dev/null
 sudo mpg123 $HOUR.mp3 > /dev/null 2>/dev/null
 
 case $HOUR in
@@ -64,4 +64,4 @@ while [ $HOURCOUNT -lt $HOUR ]; do
 	sudo mpg123 ZDong6.mp3 > /dev/null 2>/dev/null
 	HOURCOUNT=`expr $HOURCOUNT + 1`
 done
-echo "The time is $HOUR of the clock, or is it?" | sudo festival --tts
+echo "The time was $HOUR of the clock, before the first dong!" | sudo festival --tts
