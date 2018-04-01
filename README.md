@@ -1,6 +1,8 @@
 OijpaClock
 
-This script was created for raspberry pi's but can be used on any Linux or Unix system.
+This set of sounds and shellscript were created for Raspberry Pi's but can be used on any Linux or Unix system.
+Must have a speaker to make it "enjoyable."
+
 Create a $HOME/bin directory and link badjokes and rndjoke to it.
 Shell Script and Sounds called by Cron Jobs for a Grandpa Clock (Also bad jokes)
 
@@ -21,5 +23,6 @@ To add assorted things to crontab, type 'crontab -e' and type:
 
 ...
 You will need to add festival and espeak to your apps...
+(For Ubuntu / Raspbian / Debian distros) ...
 sudo apt-get update
 sudo apt-get install festival espeak
