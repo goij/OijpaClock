@@ -8,9 +8,9 @@
 
 #Crontab Entries: (if using an id other than pi, change the home directory, and obviously uncomment them!)
 # 0 * * * * /home/pi/OijpaClock/OijpaClock.sh > /dev/null 2>/dev/null
-# 15  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/ZachGrandmaClock15.mp3 > /dev/null 2>/dev/null&
-# 30  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/ZachGrandmaClock30.mp3 > /dev/null 2>/dev/null&
-# 45  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/ZachGrandmaClock45.mp3 > /dev/null 2>/dev/null&
+# 15  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_15_min.mp3 > /dev/null 2>/dev/null&
+# 30  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_30_min.mp3 > /dev/null 2>/dev/null&
+# 45  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_45_min.mp3 > /dev/null 2>/dev/null&
 # *  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/TickTock.mp3 > /dev/null 2>/dev/null&
 HOUR=`date +%H`
 
