@@ -11,9 +11,9 @@ To add assorted things to crontab, type 'crontab -e' and type:
 (note that this one is for the pi user; change that if using another)
 # m h  dom mon dow   command
 0 * * * * /home/pi/OijpaClock/OijpaClock.sh > /dev/null 2>/dev/null
-15  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/ZachGrandmaClock15.mp3 > /dev/null 2>/dev/null&
-30  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/ZachGrandmaClock30.mp3 > /dev/null 2>/dev/null&
-45  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/ZachGrandmaClock45.mp3 > /dev/null 2>/dev/null&
+15  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_15_Min.mp3 > /dev/null 2>/dev/null&
+30  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_30_Min.mp3 > /dev/null 2>/dev/null&
+45  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_45_Min.mp3 > /dev/null 2>/dev/null&
 *  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/TickTock.mp3 > /dev/null 2>/dev/null&
 
 # This one takes 3 LED's connected; the /home/pi/pybin/fl3-1.py file must be ready.
