@@ -14,13 +14,18 @@
 # *  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/TickTock.mp3 > /dev/null 2>/dev/null&
 HOUR=`date +%H`
 
-echo $HOUR
+#echo $HOUR
 
 cd /home/pi/OijpaClock
 
 sudo omxplayer Westminster.mp3 > /dev/null 2>/dev/null
 sudo mpg123 $HOUR.mp3 > /dev/null 2>/dev/null
 
+if [ $HOUR > 12 ]; then
+	PM="PM"
+else
+	PM="AM"
+fi
 case $HOUR in
 13)
 	HOUR=01
@@ -56,7 +61,7 @@ case $HOUR in
 	HOUR=11
 	;;
 esac
-echo $HOUR
+#echo $HOUR
 	
 
 HOURCOUNT="0"
@@ -64,4 +69,4 @@ while [ $HOURCOUNT -lt $HOUR ]; do
 	sudo mpg123 ZDong6.mp3 > /dev/null 2>/dev/null
 	HOURCOUNT=`expr $HOURCOUNT + 1`
 done
-echo "The time was $HOUR of the clock, before the first dong!" | sudo festival --tts
+echo "The time was $HOUR O Clock $PM, before the first dong!" | sudo festival --tts
