@@ -21,10 +21,10 @@ cd /home/pi/OijpaClock
 sudo omxplayer Westminster.mp3 > /dev/null 2>/dev/null
 sudo mpg123 $HOUR.mp3 > /dev/null 2>/dev/null
 
-if [ $HOUR > 12 ]; then
-	PM="PM"
+if [ $HOUR > 11 ]; then
+	PM="P M"
 else
-	PM="AM"
+	PM="A M"
 fi
 case $HOUR in
 13)
