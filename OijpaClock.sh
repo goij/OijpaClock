@@ -16,12 +16,12 @@ HOUR=`date +%H`
 
 #echo $HOUR
 
-cd /home/pi/OijpaClock
+cd $HOME/OijpaClock
 
 sudo omxplayer Westminster.mp3 > /dev/null 2>/dev/null
 sudo mpg123 $HOUR.mp3 > /dev/null 2>/dev/null
 
-if [ $HOUR > 11 ]; then
+if [ $HOUR -gt 11 ]; then
 	PM="P M"
 else
 	PM="A M"
