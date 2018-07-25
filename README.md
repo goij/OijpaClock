@@ -7,7 +7,7 @@ Must have a speaker to make it "annoying or enjoyable."
 You will need to add festival and/or espeak to your apps...
 (For Ubuntu / Raspbian / Debian distros) ...
 sudo apt-get update
-sudo apt-get install festival espeak
+sudo apt-get -y install festival espeak mpg123
 
 Create a $HOME/bin directory and link badjokes and rndjoke to it.
 Shell Script and Sounds called by Cron Jobs for a Grandpa Clock (Also bad jokes)
