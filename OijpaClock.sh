@@ -4,21 +4,21 @@
 # make a noise every hour on the hour like a clock.
 
 # Crontab Entry:
-# 0 * * * * /home/pi/OijpaClock/OijpaClock.sh > /dev/null 2>/dev/null&
+# 0 * * * * $HOME/OijpaClock/OijpaClock.sh > /dev/null 2>/dev/null&
 
 #Crontab Entries: (if using an id other than pi, change the home directory, and obviously uncomment them!)
-# 0 * * * * /home/pi/OijpaClock/OijpaClock.sh > /dev/null 2>/dev/null
-# 15  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_15_min.mp3 > /dev/null 2>/dev/null&
-# 30  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_30_min.mp3 > /dev/null 2>/dev/null&
-# 45  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/Justice_45_min.mp3 > /dev/null 2>/dev/null&
-# *  *  *  *  *  sudo /usr/bin/mpg123 /home/pi/OijpaClock/TickTock.mp3 > /dev/null 2>/dev/null&
+# 0 * * * * $HOME/OijpaClock/OijpaClock.sh > /dev/null 2>/dev/null
+# 15  *  *  *  *  sudo /usr/bin/mpg123 $HOME/OijpaClock/Justice_15_min.mp3 > /dev/null 2>/dev/null&
+# 30  *  *  *  *  sudo /usr/bin/mpg123 $HOME/OijpaClock/Justice_30_min.mp3 > /dev/null 2>/dev/null&
+# 45  *  *  *  *  sudo /usr/bin/mpg123 $HOME/OijpaClock/Justice_45_min.mp3 > /dev/null 2>/dev/null&
+# *  *  *  *  *  sudo /usr/bin/mpg123 $HOME/OijpaClock/TickTock.mp3 > /dev/null 2>/dev/null&
 HOUR=`date +%H`
 
 #echo $HOUR
 
 cd $HOME/OijpaClock
 
-sudo omxplayer Westminster.mp3 > /dev/null 2>/dev/null
+sudo mpg123 Westminster.mp3 > /dev/null 2>/dev/null
 sudo mpg123 $HOUR.mp3 > /dev/null 2>/dev/null
 
 if [ $HOUR -gt 11 ]; then
@@ -26,6 +26,7 @@ if [ $HOUR -gt 11 ]; then
 else
 	PM="A M"
 fi
+
 case $HOUR in
 13)
 	HOUR=01
