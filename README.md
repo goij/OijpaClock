@@ -13,7 +13,7 @@ Create a $HOME/bin directory and link badjokes and rndjoke to it.
 Shell Script and Sounds called by Cron Jobs for a Grandpa Clock (Also bad jokes)
 
 To add assorted things to crontab, type 'crontab -e' and type:
-(note that this is desined for the pi or other user for the crontab)
+(note that this is designed for the pi or other user for the crontab):
 # m h  dom mon dow   command
 @reboot $HOME/OijpaClock/rndjoke > /dev/null 2>/dev/null&
 0 * * * * $HOME/OijpaClock/OijpaClock.sh > /dev/null 2>/dev/null
