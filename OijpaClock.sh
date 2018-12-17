@@ -70,4 +70,4 @@ while [ $HOURCOUNT -lt $HOUR ]; do
 	sudo mpg123 ZDong6.mp3 > /dev/null 2>/dev/null
 	HOURCOUNT=`expr $HOURCOUNT + 1`
 done
-echo "The time was $HOUR O Clock $PM, before the first dong!" | sudo festival --tts
+echo "The time was $HOUR Oy Clock $PM, before the first dong!" | sudo festival --tts
