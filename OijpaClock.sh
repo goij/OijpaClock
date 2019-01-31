@@ -71,3 +71,5 @@ while [ $HOURCOUNT -lt $HOUR ]; do
 	HOURCOUNT=`expr $HOURCOUNT + 1`
 done
 echo "The time was $HOUR Oy Clock $PM, before the first dong!" | sudo festival --tts
+#echo "The time was $HOUR Oy Clock $PM, before the first dong!" | sudo espeak -p 50 -s 140 -a 150 > /dev/null 2>/dev/null
+# if using espeak, -a is amplitde, default is 100; -p is pitch, default is 50; -s is words per minute, default is 160
