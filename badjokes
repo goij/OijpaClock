@@ -1,3 +1,0 @@
-#!/bin/bash
-
-cat /home/goij/misc/badjokes.txt | sudo festival --tts

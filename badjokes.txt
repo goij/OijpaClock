@@ -136,7 +136,7 @@ What do you do with epileptic lettuce?  Make a seizure salad.
 What do get when you cross a fish with a self-learning program?  are tee fish all intelligence.
 What does a pirate say to his friend after he just turned 80?  Hi Matey.
 Why do most programmers do better in the morning?  They have Java.
-What do you call a man sits down and tries to teach topics that everybody knows?  Chair Man of the Bored.
+What do you call a man who sits down and tries to teach topics that everybody knows?  Chair Man of the Bored.
 What did the necktie say to the hat?  You go on a head; I will hang around.
 What do you call a funny criminal with a cold named Ted?  Con Jest Ted.
 What do you call an average golfer who likes pizza?  Par Cheezy.
@@ -170,3 +170,7 @@ What do you call a vehicle named Dee that talks too much?  Cardiac.
 What do you call a bear without teeth?  Gummy Bear.
 What do you call a loving Italian bug who bites you?  Roman Tick.
 What do you call the most important aunt who likes red wine?  Key Auntie.
+What do you call a deteriorating Raspberry Pi who says "Harrr?"  A Pi Rot.
+What is Irish, green, and stays out all night?  Patio Furniture.
+Why was the fly so nervous at the fruit market?  Because he was on a date.
+What is a good data structure to keep track of multiple professional co-workers?  A Linked-In List!
