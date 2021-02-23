@@ -8,52 +8,52 @@
 
 #Crontab Entries: (if using an id other than pi, change the home directory, and obviously uncomment them!)
 # 0 * * * * $HOME/OijpaClock/OijpaClock.sh > /dev/null 2>/dev/null
-# 15  *  *  *  *  sudo /usr/bin/mpg123 $HOME/OijpaClock/Justice_15_min.mp3 > /dev/null 2>/dev/null&
-# 30  *  *  *  *  sudo /usr/bin/mpg123 $HOME/OijpaClock/Justice_30_min.mp3 > /dev/null 2>/dev/null&
-# 45  *  *  *  *  sudo /usr/bin/mpg123 $HOME/OijpaClock/Justice_45_min.mp3 > /dev/null 2>/dev/null&
-# *  *  *  *  *  sudo /usr/bin/mpg123 $HOME/OijpaClock/TickTock.mp3 > /dev/null 2>/dev/null&
+# 15  *  *  *  *  sudo omxplayer --vol -2000 $HOME/OijpaClock/Justice_15_min.mp3 > /dev/null 2>/dev/null&
+# 30  *  *  *  *  sudo omxplayer --vol -2000 $HOME/OijpaClock/Justice_30_min.mp3 > /dev/null 2>/dev/null&
+# 45  *  *  *  *  sudo omxplayer --vol -2000 $HOME/OijpaClock/Justice_45_min.mp3 > /dev/null 2>/dev/null&
+# *  *  *  *  *  sudo omxplayer $HOME/OijpaClock/TickTock.mp3 > /dev/null 2>/dev/null&
 HOUR=`date +%H`
 
-#echo $HOUR
 
 cd $HOME/OijpaClock
 
-sudo mpg123 Westminster.mp3 > /dev/null 2>/dev/null
-sudo mpg123 $HOUR.mp3 > /dev/null 2>/dev/null
+# note that volume default is 0; make things softer with --vol -#
+sudo omxplayer --vol -1000 Westminster.mp3 > /dev/null 2>/dev/null
+sudo omxplayer --vol -1500 $HOUR.mp3 > /dev/null 2>/dev/null
 
 if [ $HOUR -gt 11 ]; then
-	PM="P M"
+	PM="P. M."
 else
-	PM="A M"
+	PM="A. M."
 fi
 
 case $HOUR in
 13)
-	HOUR=01
+	HOUR=1
 	;;
 14)
-	HOUR=02
+	HOUR=2
 	;;
 15)
-	HOUR=03
+	HOUR=3
 	;;
 16)
-	HOUR=04
+	HOUR=4
 	;;
 17)
-	HOUR=05
+	HOUR=5
 	;;
 18)
-	HOUR=06
+	HOUR=6
 	;;
 19)
-	HOUR=07
+	HOUR=7
 	;;
 20)
-	HOUR=08
+	HOUR=8
 	;;
 21)
-	HOUR=09
+	HOUR=9
 	;;
 22)
 	HOUR=10
@@ -62,14 +62,18 @@ case $HOUR in
 	HOUR=11
 	;;
 esac
-#echo $HOUR
-	
 
+first_char="$(printf '%s' "$HOUR" | cut -c1)"
+if [ $first_char -eq 0 ]; then
+  HOUR=`echo $HOUR | sed -e 's/^.//'`
+fi
+
+# if using espeak, -a is amplitde, default is 100; -p is pitch, default is 50; -s is words per minute, default is 160
+sudo espeak "Oy Vey! the time was $HOUR Oy Clock $PM, before the first dong!" -a 140 -p 90 -s 150 -w /tmp/time.wav
 HOURCOUNT="0"
 while [ $HOURCOUNT -lt $HOUR ]; do
-	sudo mpg123 ZDong6.mp3 > /dev/null 2>/dev/null
-	HOURCOUNT=`expr $HOURCOUNT + 1`
+        sudo mpg123 ZDong6.mp3 > /dev/null 2>/dev/null
+        HOURCOUNT=`expr $HOURCOUNT + 1`
 done
-echo "The time was $HOUR Oy Clock $PM, before the first dong!" | sudo festival --tts
-#echo "The time was $HOUR Oy Clock $PM, before the first dong!" | sudo espeak -p 50 -s 140 -a 150 > /dev/null 2>/dev/null
-# if using espeak, -a is amplitde, default is 100; -p is pitch, default is 50; -s is words per minute, default is 160
+
+sudo omxplayer --vol -1000 /tmp/time.wav >/dev/null 2>/dev/null

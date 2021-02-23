@@ -1,0 +1,5 @@
+#!/bin/bash
+
+gtts-cli -f $HOME/OijpaClock/badjokes.txt | play -t mp3 - > /dev/null 2>/dev/null
+
+#cat /home/goij/OijpaClock/badjokes.txt | sudo festival --tts
