@@ -14,11 +14,10 @@
 # *  *  *  *  *  sudo omxplayer $HOME/OijpaClock/TickTock.mp3 > /dev/null 2>/dev/null&
 HOUR=`date +%H`
 
-
 cd $HOME/OijpaClock
 
 # note that volume default is 0; make things softer with --vol -#
-sudo omxplayer --vol -1000 Westminster.mp3 > /dev/null 2>/dev/null
+sudo omxplayer --vol -500 Westminster.mp3 > /dev/null 2>/dev/null
 sudo omxplayer --vol -1500 $HOUR.mp3 > /dev/null 2>/dev/null
 
 if [ $HOUR -gt 11 ]; then
@@ -72,7 +71,7 @@ fi
 sudo espeak "Oy Vey! the time was $HOUR Oy Clock $PM, before the first dong!" -a 140 -p 90 -s 150 -w /tmp/time.wav
 HOURCOUNT="0"
 while [ $HOURCOUNT -lt $HOUR ]; do
-        sudo mpg123 ZDong6.mp3 > /dev/null 2>/dev/null
+        sudo omxplayer --vol -1000 ZDong6.mp3 > /dev/null 2>/dev/null
         HOURCOUNT=`expr $HOURCOUNT + 1`
 done
 
